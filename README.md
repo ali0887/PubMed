@@ -11,6 +11,7 @@
    - Web application using Flask
 4. Generative AI Model Integration
    - T5 (Hugging Face) for text summarization
+5. Application Images
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
