@@ -17,10 +17,6 @@
 ## Getting Started
 This project aims to summarize PubMed articles using a fine-tuned text summarization model. The summarizer is deployed as a web application built with Flask.
 
-### Structure of the Repository:
-
-
-
 ### How to Run the App
 #### Clone the Repository 
 ```shell
@@ -83,6 +79,12 @@ The application also allows you to choose between bried and detailed summary of 
 The choice for choosing the T5 (Text to Text Transfer Transformer) for the generative AI Model came simply down to a selection between the multiple models available and sticking to it.
 The T5 Model offers multiple different models to choose from. For this project, the model choosen was the t5-small model due to the hardware and time constraints on the project.
 
-Having ran the 
+Having ran the model with varying train data size, processed and unprocessed data, there are many inferences that can be made.
+1. Cleaning the Dataset improves the metrics, performance and the time taken to fine tune the model.
+2. Fine Tuning the model with a quarter of the original training samples reduces the training time but also reduces the quality of the model.
+3. Without preprocessing the data, the summarized text produced contains text that do nnot corelate with the article at all.
+
+The Tuning was done on Kaggle using the accelerator: GPU T4 x 2 that provided 2 GPU's with 15 GB of memory each alongside 4 cores and 29 GB of system RAM.
+
 
 
