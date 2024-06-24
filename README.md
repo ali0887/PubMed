@@ -84,18 +84,18 @@ Having ran the model with varying train data size, processed and unprocessed dat
 2. Fine Tuning the model with a quarter of the original training samples reduces the training time but also reduces the quality of the model.
 3. Without preprocessing the data, the summarized text produced contains text that do nnot corelate with the article at all.
 
--The Tuning was done on Kaggle using the accelerator: GPU T4 x 2 that provided 2 GPU's with 15 GB of memory each alongside 4 cores and 29 GB of system RAM.
+The Tuning was done on Kaggle using the accelerator: GPU T4 x 2 that provided 2 GPU's with 15 GB of memory each alongside 4 cores and 29 GB of system RAM.
 
--For calculating the performance of the model, we used the ROGUE Metric specifically the ROGUE 1, ROGUE 2, and ROGUE L respectively.
+For calculating the performance of the model, we used the ROGUE Metric specifically the ROGUE 1, ROGUE 2, and ROGUE L respectively.
 
--The Model being used limited us to a maximum token of 512 which is approximately 628 english words
+The Model being used limited us to a maximum token of 512 which is approximately 628 english words
 
--The Fine Tuning was done with the following specifications:
+The Fine Tuning was done with the following specifications:
    1. Epochs = 3
    2. Batch Size = 8
    3. Learning Rate = 0.0001
 
--For a total training time of 3 Hours we got the following results:
+For a total training time of 3 Hours we got the following results:
    1. Rogue 1: 0.50900
    2. Rogue 2: 0.21800
    3. Rogue L: 0.44250
