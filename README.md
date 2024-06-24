@@ -17,10 +17,21 @@
 ## Getting Started
 This project aims to summarize PubMed articles using a fine-tuned text summarization model. The summarizer is deployed as a web application built with Flask.
 
-### How to Run the App
-#### Clone the Repository 
-```shell
-git clone https://github.com/ali0887/PubMed.git
+### Directory Structure
+
+```plaintext
+web_app/
+│
+├── app.py
+├── Preprocessing and Model.ipynb
+├── requirements.txt
+├── fine_tuned_model_final/
+│   └── model.safetensors
+├── templates/
+│   └── index.html
+├── static/
+│   └── style.css
+└── README.md
 ```
 You can also download the reporsitory as a zip file and unzip it in a seperate folder.
 
