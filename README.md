@@ -22,7 +22,7 @@ This project aims to summarize PubMed articles using a fine-tuned text summariza
 ```shell
 git clone https://github.com/ali0887/PubMed.git
 ```
-You can also download the reporsitory as a zip file and unzip it in a seperate folder.
+-You can also download the reporsitory as a zip file and unzip it in a seperate folder.
 
 #### Set up a virtual Environment and run the requirements.txt file
 ```shell
@@ -52,14 +52,14 @@ pip install -r requirements.txt
 - After the data has been cleaned and preprocessed, we converted each article into its respective tokens to be used for training and evaluation by the model.
 - Articles were padded and truncated to a maximum length to maintain consistency and manage memory efficiently during training.
 
-With these preprocessing steps, the dataset is now ready for effective training and evaluation, ensuring that the model can focus on the most relevant and clean information for summarization.
+-With these preprocessing steps, the dataset is now ready for effective training and evaluation, ensuring that the model can focus on the most relevant and clean information for summarization.
 
 
 ## Web Application Development
 
-To develop the Web Application and link the model with the web interface, we used Flask for its simplicity and ease of access.
-The application allows users to input PubMed articles and provides a summarized version of the text using the fine-tuned model.
-The application also allows you to choose between bried and detailed summary of the article.
+-To develop the Web Application and link the model with the web interface, we used Flask for its simplicity and ease of access.
+-The application allows users to input PubMed articles and provides a summarized version of the text using the fine-tuned model.
+-The application also allows you to choose between bried and detailed summary of the article.
 
 ### Web Page
 - The Web Page is made in HTML, CSS, and Javascript.
@@ -76,15 +76,27 @@ The application also allows you to choose between bried and detailed summary of 
 
 ## Generative AI Model Integration
 
-The choice for choosing the T5 (Text to Text Transfer Transformer) for the generative AI Model came simply down to a selection between the multiple models available and sticking to it.
-The T5 Model offers multiple different models to choose from. For this project, the model choosen was the t5-small model due to the hardware and time constraints on the project.
+-The choice for choosing the T5 (Text to Text Transfer Transformer) for the generative AI Model came simply down to a selection between the multiple models available and sticking to it.
+-The T5 Model offers multiple different models to choose from. For this project, the model choosen was the t5-small model due to the hardware and time constraints on the project.
 
 Having ran the model with varying train data size, processed and unprocessed data, there are many inferences that can be made.
 1. Cleaning the Dataset improves the metrics, performance and the time taken to fine tune the model.
 2. Fine Tuning the model with a quarter of the original training samples reduces the training time but also reduces the quality of the model.
 3. Without preprocessing the data, the summarized text produced contains text that do nnot corelate with the article at all.
 
-The Tuning was done on Kaggle using the accelerator: GPU T4 x 2 that provided 2 GPU's with 15 GB of memory each alongside 4 cores and 29 GB of system RAM.
+-The Tuning was done on Kaggle using the accelerator: GPU T4 x 2 that provided 2 GPU's with 15 GB of memory each alongside 4 cores and 29 GB of system RAM.
+-For calculating the performance of the model, we used the ROGUE Metric specifically the ROGUE 1, ROGUE 2, and ROGUE L respectively.
+-The Model being used limited us to a maximum token of 512 which is approximately 628 english words
+-The Fine Tuning was done with the following specifications:
+   1. Epochs = 3
+   2. Batch Size = 8
+   3. Learning Rate = 0.0001
 
+-For a total training time of 3 Hours we got the following results:
+   1. Rogue 1: 0.50900
+   2. Rogue 2: 0.21800
+   3. Rogue L: 0.44250
 
-
+- The rogue scores we obtained show us that the model understands our dataset well enough. The performance is neither absolutely bad nor absolutely amazing. it strikes in between the two providing good summaries.
+- Another run of the Model with a smaller training dataset but greater epoch run showed that the model started to perform significantly worse after finishing the 3rd Epoch. As such the Final Model only trains upto 3 epochs.
+- As far as betterment of the application is concerned, it could be improved by using techniques like ensemble, better fine tuning, or more effecient pre processing of the data however, was not possible due to the time constraint.
