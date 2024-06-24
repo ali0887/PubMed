@@ -94,7 +94,7 @@ pip install -r requirements.txt
 
 ## Generative AI Model Integration
 
--The choice for choosing the T5 (Text to Text Transfer Transformer) for the generative AI Model came simply down to a selection between the multiple models available and sticking to it.
+The choice for choosing the T5 (Text to Text Transfer Transformer) for the generative AI Model came simply down to a selection between the multiple models available and sticking to it.
 -The T5 Model offers multiple different models to choose from. For this project, the model choosen was the t5-small model due to the hardware and time constraints on the project.
 
 Having ran the model with varying train data size, processed and unprocessed data, there are many inferences that can be made.
