@@ -28,6 +28,7 @@ web_app/
 ├── requirements.txt
 ├── fine_tuned_model_final/
 │   └── model.safetensors
+├── static/
 ├── templates/
 │   └── index.html
 ├── static/
