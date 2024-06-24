@@ -118,6 +118,16 @@ For a total training time of 3 Hours we got the following results:
    2. Rogue 2: 0.21800
    3. Rogue L: 0.44250
 
+![image](https://github.com/ali0887/PubMed/assets/110498074/456ee4b1-51da-45c5-990d-722432628d29)
+
+
 - The rogue scores we obtained show us that the model understands our dataset well enough. The performance is neither absolutely bad nor absolutely amazing. it strikes in between the two providing good summaries.
 - Another run of the Model with a smaller training dataset but greater epoch run showed that the model started to perform significantly worse after finishing the 3rd Epoch. As such the Final Model only trains upto 3 epochs.
 - As far as betterment of the application is concerned, it could be improved by using techniques like ensemble, better fine tuning, or more effecient pre processing of the data however, was not possible due to the time constraint.
+
+
+## Application Images:
+![image](https://github.com/ali0887/PubMed/assets/110498074/f6766b8a-ed68-43a6-94ac-8fc513af84e6)
+![image](https://github.com/ali0887/PubMed/assets/110498074/55f15e5d-3a41-4b9d-9d73-19dc53da65a2)
+
+
