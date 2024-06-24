@@ -33,6 +33,13 @@ web_app/
 │   └── style.css
 └── README.md
 ```
+
+### Running the App
+
+Clone the Repository 
+```shell
+git clone https://github.com/ali0887/PubMed.git
+```
 You can also download the reporsitory as a zip file and unzip it in a seperate folder.
 
 #### Set up a virtual Environment and run the requirements.txt file
