@@ -22,7 +22,7 @@ This project aims to summarize PubMed articles using a fine-tuned text summariza
 ```shell
 git clone https://github.com/ali0887/PubMed.git
 ```
--You can also download the reporsitory as a zip file and unzip it in a seperate folder.
+You can also download the reporsitory as a zip file and unzip it in a seperate folder.
 
 #### Set up a virtual Environment and run the requirements.txt file
 ```shell
@@ -85,8 +85,11 @@ Having ran the model with varying train data size, processed and unprocessed dat
 3. Without preprocessing the data, the summarized text produced contains text that do nnot corelate with the article at all.
 
 -The Tuning was done on Kaggle using the accelerator: GPU T4 x 2 that provided 2 GPU's with 15 GB of memory each alongside 4 cores and 29 GB of system RAM.
+
 -For calculating the performance of the model, we used the ROGUE Metric specifically the ROGUE 1, ROGUE 2, and ROGUE L respectively.
+
 -The Model being used limited us to a maximum token of 512 which is approximately 628 english words
+
 -The Fine Tuning was done with the following specifications:
    1. Epochs = 3
    2. Batch Size = 8
