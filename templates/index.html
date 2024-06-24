@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PubMed Article Summarizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h1 class="center">PubMed Article Summarizer</h1>
+
+    <div class="box-container">
+        <div class="box left">
+            <h2>Enter Text to Summarize</h2>
+            <textarea id="input_text"></textarea>
+
+            <div class="controls">
+                <label for="mode_toggle">Select Mode:</label>
+                <select id="mode_toggle">
+                    <option value="100">Brief</option>
+                    <option value="300">Detailed</option>
+                </select>
+                <button id="summarize_button">Summarize</button>
+            </div>
+        </div>
+
+        <div class="box right">
+            <h2>Summarized Text</h2>
+            <textarea id="output_text" readonly></textarea>
+        </div>
+    </div>
+
+    <div class="spinner" id="spinner"></div>
+
+    <script>
+        $(document).ready(function(){      
+            $('#summarize_button').click(function(){
+
+                $('#spinner').show();
+                var input_text = $('#input_text').val();
+                var mode = $('#mode_toggle').val();
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/summarize',
+                    data: { input_text: input_text, mode: mode },
+                    success: function(response) {
+                        $('#output_text').val(response.summary);
+                        $('#spinner').hide();
+                    },
+                    error: function(error) {
+                        console.log(error);
+                        $('#spinner').hide();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
