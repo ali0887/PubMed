@@ -76,9 +76,13 @@ The application also allows you to choose between bried and detailed summary of 
    2. Establishing a link between the web page to GET and POST.
    3. When input comes, preprocessing the data and setting the appropriate parameters for the model.
    4. Running the model and sending the results back to the web page.
-   5. 
+      
 
 ## Generative AI Model Integration
 
+The choice for choosing the T5 (Text to Text Transfer Transformer) for the generative AI Model came simply down to a selection between the multiple models available and sticking to it.
+The T5 Model offers multiple different models to choose from. For this project, the model choosen was the t5-small model due to the hardware and time constraints on the project.
+
+Having ran the 
 
 
